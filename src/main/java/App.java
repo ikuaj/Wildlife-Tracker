@@ -35,17 +35,17 @@ public class App{
 
         post("/details", (request, respond) ->{
             Map<String, Object> model = new HashMap<String, Object>();
-            // String ranger = request.queryParams("ranger");
-            // String animal = request.queryParams("animal");
-            // String endangered = request.queryParams("endangered");
-            // String location = request.queryParams("location");
-            // String health = request.queryParams("health");
-            // String age = request.queryParams("age");
-            // Animal newAnimal = new Animal(animal, endangered, health, age);
-            // newAnimal.save();
-            // Sighting newSighting = new Sighting(ranger, location, newAnimal.getId());
-            // newSighting.save();
-            // model.put("sightings", Sighting.all());
+            String ranger = request.queryParams("ranger");
+            String animal = request.queryParams("animal");
+            String endangered = request.queryParams("endangered");
+            String location = request.queryParams("location");
+            String health = request.queryParams("health");
+            String age = request.queryParams("age");
+            Animal newAnimal = new Animal(animal, endangered, health, age);
+            newAnimal.save();
+            Sighting newSighting = new Sighting(ranger, location, newAnimal.getId());
+            newSighting.save();
+            model.put("sightings", Sighting.all());
             model.put("animals",Animal.all());
             model.put("AnimalClass", Animal.class);
             model.put("template", "templates/home.vtl");
