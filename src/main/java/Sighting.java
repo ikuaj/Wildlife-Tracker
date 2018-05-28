@@ -30,17 +30,17 @@ public class Sighting{
     public int getId(){
         return id;
     }
-//     public void save() {
-//         try(Connection con = DB.sql2o.open()) {
-//            String sql = "INSERT INTO sightings (ranger, location, animal_id, timestamp) VALUES (:ranger, :location, :animal_id, now())";
-//            this.id = (int) con.createQuery(sql, true)
-//            .addParameter("ranger", this.ranger)
-//            .addParameter("location", this.location)
-//            .addParameter("animal_id", this.animal_id)
-//            .executeUpdate()
-//            .getKey();
-//         }
-//      }
+    public void save() {
+        try(Connection con = DB.sql2o.open()) {
+           String sql = "INSERT INTO sightings (ranger, location, animal_id, timestamp) VALUES (:ranger, :location, :animal_id, now())";
+           this.id = (int) con.createQuery(sql, true)
+           .addParameter("ranger", this.ranger)
+           .addParameter("location", this.location)
+           .addParameter("animal_id", this.animal_id)
+           .executeUpdate()
+           .getKey();
+        }
+     }
 //      public static List<Sighting> all() {
 //         String sql = "select * from sightings";
 //         try(Connection con = DB.sql2o.open()) {
