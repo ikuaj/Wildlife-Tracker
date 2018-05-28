@@ -32,20 +32,20 @@ public class Animal{
         return id;
     }
 
-    // public void save(){
-    //     try(Connection con = DB.sql2o.open()){
-    //         String sql = "INSERT INTO animals(animal, endangered, health, age) VALUES(:animal, :endangered, :health, :age)";
-    //         this.id = (int) con.createQuery(sql, true)
-    //         .addParameter("animal", this.animal)
-    //         .addParameter("endangered", this.endangered)
-    //         .addParameter("health", this.health)
-    //         .addParameter("age", this.age)
-    //         .throwOnMappingFailure(false)
-    //         .executeUpdate()
-    //         .getKey();
+    public void save(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "INSERT INTO animals(animal, endangered, health, age) VALUES(:animal, :endangered, :health, :age)";
+            this.id = (int) con.createQuery(sql, true)
+            .addParameter("animal", this.animal)
+            .addParameter("endangered", this.endangered)
+            .addParameter("health", this.health)
+            .addParameter("age", this.age)
+            .throwOnMappingFailure(false)
+            .executeUpdate()
+            .getKey();
 
-    //     }
-    // }
+        }
+    }
     
     // public static List<Animal> all() {
     //     String sql = "select * from animals";
