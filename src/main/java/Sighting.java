@@ -41,11 +41,11 @@ public class Sighting{
            .getKey();
         }
      }
-//      public static List<Sighting> all() {
-//         String sql = "select * from sightings";
-//         try(Connection con = DB.sql2o.open()) {
-//            return con.createQuery(sql)
-//            .executeAndFetch(Sighting.class);
-//         }
-//      }
-// }
+     public static List<Sighting> all() {
+        String sql = "select * from sightings";
+        try(Connection con = DB.sql2o.open()) {
+           return con.createQuery(sql)
+           .executeAndFetch(Sighting.class);
+        }
+     }
+}
