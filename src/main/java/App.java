@@ -24,14 +24,14 @@ public class App{
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        // get("/home", (request, respond) ->{
-        //     Map<String, Object> model = new HashMap<String, Object>();
-        //     model.put("sightings", Sighting.all());
-        //     model.put("animals",Animal.all());
-        //     model.put("AnimalClass", Animal.class);
-        //     model.put("template", "templates/home.vtl");
-        //     return new ModelAndView(model, layout);
-        // }, new VelocityTemplateEngine());
+        get("/home", (request, respond) ->{
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("sightings", Sighting.all());
+            model.put("animals",Animal.all());
+            model.put("AnimalClass", Animal.class);
+            model.put("template", "templates/home.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
 
         post("/details", (request, respond) ->{
             Map<String, Object> model = new HashMap<String, Object>();
