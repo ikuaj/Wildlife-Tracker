@@ -47,14 +47,14 @@ public class Animal{
         }
     }
     
-    // public static List<Animal> all() {
-    //     String sql = "select * from animals";
-    //     try(Connection con = DB.sql2o.open()) {
-    //        return con.createQuery(sql)
-    //        .throwOnMappingFailure(false)
-    //        .executeAndFetch(Animal.class);
-    //     }
-    // }
+    public static List<Animal> all() {
+        String sql = "select * from animals";
+        try(Connection con = DB.sql2o.open()) {
+           return con.createQuery(sql)
+           .throwOnMappingFailure(false)
+           .executeAndFetch(Animal.class);
+        }
+    }
 
     public static String getAnimalName(int id) {
         String sql = "select animal from animals where id = :id;";
