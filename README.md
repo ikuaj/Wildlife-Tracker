@@ -22,14 +22,24 @@ Setup
 
 To use the code, you can clone the repository at: https://github.com/ikuaj/Wildlife-Tracker.
 
-$ git clone 
+$ git clone
+
 $ cd wildlife-tracker
+
 $ gradle run
+
 Go to localhost:4567 in your browser
+
 Database Instructions (postgres/psql)
+
 Run in terminal: postgres
+
 Run in new terminal window: psql
+
 Run in psql: CREATE DATABASE wildlife_tracker;
+
 Run in psql: CREATE TABLE animals (id serial PRIMARY KEY, animal_name varchar, endangered varchar, animal_health varchar, animal_age varchar);
+
 Run in psql: CREATE TABLE sightings (id serial PRIMARY KEY, animal_id int, location varchar, ranger_name varchar, timestamp timestamp);
+
 Run in psql: \connect wildlife_tracker
