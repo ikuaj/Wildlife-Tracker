@@ -1,16 +1,7 @@
 #body{
-    background-image: url(../images/bg1.jpg);
+    background-image: url(/images/panther.jpg);
     background-size: cover;
-}
-
-#div{
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    color: white;
-    font-size: 60px;
-    background-color:#212326;
-    margin: 0%;
-    padding: 1%;
+    background-repeat: no-repeat;
 }
 
 h1{
@@ -18,14 +9,14 @@ h1{
     font-family: 'Anton', sans-serif;
     color: white;
     font-size: 60px;
-    background-color:#212326;
+    background-image: inherit;
     margin: 0%;
     padding: 1%;
 }
 #quote{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
-    color: black;
+    color:white;
 }
 
 #endangered option{
@@ -33,8 +24,10 @@ h1{
 }
 
 body{
-    background-color: #212326;
+    background-image: url(/images/panther.jpg);
     color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #header{
     font-family: 'Anton', sans-serif;
@@ -56,6 +49,7 @@ select{
     border-radius: 5px;
     width: 100%;
     padding-left: 30%;
+    background-image: inherit;
 }
 .top{
     font-family:'Anton', sans-serif;
